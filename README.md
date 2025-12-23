@@ -40,8 +40,8 @@ O algoritmo utiliza uma **Busca em Largura (BFS)** apoiada por uma estrutura de 
 
 ### 2.2 Formato das Produções
 
-As regras de produção devem seguir rigorosamente o padrão:
-`LADO_ESQUERDO -> LADO_DIREITO: comentário opcional`
+As regras de produção devem seguir o padrão:
+`LADO_ESQUERDO -> LADO_DIREITO: comentário`
 
 * **Símbolo Inicial:** Deve ser sempre `S`.
 * **Palavra Vazia:** Representada por `ε` ou `λ`.
