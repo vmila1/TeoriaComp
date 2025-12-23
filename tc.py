@@ -54,7 +54,7 @@ def parser_gramatica(producoes, alvo, max_passos=100):
             continue
 
         for esq, dir_prod in producoes:
-            # Requisito para Sensível ao Contexto: busca todas as ocorrências do lado esquerdo
+            # busca todas as ocorrências do lado esquerdo
             for match in re.finditer(re.escape(esq), atual):
                 nova_string = atual[:match.start()] + dir_prod + atual[match.end():]
                 
@@ -82,7 +82,7 @@ if __name__ == "__main__":
     S -> L2C2
     C2 -> SR2
     """
-    print("--- Teste Q3: FNC ---")
+    print("Teste FNC")
     parser_gramatica(ler_producoes(fnc_grammar), "([()])")
 
     # Teste Sensível ao Contexto (a^n b^n c^n)
@@ -95,7 +95,7 @@ if __name__ == "__main__":
     bC -> bc
     cC -> cc
     """
-    print("--- Teste Cenário 3: Sensível ao Contexto ---")
+    print("Teste: Sensível ao Contexto")
     parser_gramatica(ler_producoes(csg_grammar), "aabbcc")
 
     # Teste Tipo 0 (Irrestrita)
@@ -104,5 +104,5 @@ if __name__ == "__main__":
     bCd -> X
     aXe -> afinal
     """
-    print("--- Teste Cenário 4: Irrestrita ---")
+    print("Teste: Irrestrita")
     parser_gramatica(ler_producoes(unrestricted), "afinal")
